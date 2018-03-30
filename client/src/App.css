@@ -1,0 +1,24 @@
+#header {
+  background-color: #282c34;
+  margin: 0px;
+  padding: 10px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.displayRow {
+  margin-top: 20px;
+}
+
+.displayCol {
+  border: 1px solid #282c34;
+  padding: 20px;
+  text-align: center;
+}
+
+.message {
+  font-size: 15px;
+  background-color: crimson;
+  color: #ffffff;
+  padding: 10px;
+}
