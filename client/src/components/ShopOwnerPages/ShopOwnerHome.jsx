@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import OnlineMarketplaceContract from "../../contracts/OnlineMarketplace.json";
 import getWeb3 from "../../utils/getWeb3";
-import { Row, Col, Grid, Table, Button, FormGroup, ControlLabel, FormControl } from "react-bootstrap";
+import { Row, Col, Grid, Table, Button, FormGroup, ControlLabel, FormControl, Label } from "react-bootstrap";
 import swal from 'sweetalert';
 
 
@@ -273,8 +273,12 @@ class ShopOwnerHome extends Component {
         {this.state.pageone ?
         <Grid>
             <Row>
-                <Col md={12}>
+                <Col md={6}>
                     <h3>Manage Stores</h3>
+                </Col>
+                <Col md={6}>
+                    <br/>
+                    <h5><Label bsStyle="success">Account Being Used: {this.state.accounts[0]}</Label></h5>
                 </Col>
             </Row>
             <Row className="displayRow">
@@ -360,7 +364,7 @@ class ShopOwnerHome extends Component {
                         <FormGroup
                             controlId="productPrice"
                         >
-                            <ControlLabel>Product Price</ControlLabel>
+                            <ControlLabel>Product Price (Wei)</ControlLabel>
                             <FormControl
                                 type="text"
                                 value={this.state.productPrice}

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import OnlineMarketplaceContract from "../../contracts/OnlineMarketplace.json";
 import getWeb3 from "../../utils/getWeb3";
-import { Row, Col, Grid, Button, Table } from "react-bootstrap";
+import { Row, Col, Grid, Button, Table, Label } from "react-bootstrap";
 import swal from 'sweetalert';
 
 
@@ -166,13 +166,31 @@ class ShopperHome extends Component {
         {this.state.pageone ?
           <Grid>
               <Row>
-                  <Col md={8}>
-                      <h3>Shopping Stores</h3>
+                <Col md={4} className="aligncenter">
+                    <br/>
+                    <img src={require('../images/image1.png')} width="300px"/>
+                </Col>
+                <Col md={4} className="aligncenter">
+                      <br/><br/><br/>
+                      <h4>Welcome</h4>
+                      <p>You will find a list of stores below. You can see the products that these stores offer and purchase it.</p>
                   </Col>
+                  <Col md={4} className="aligncenter">
+                      <br/>
+                      <br/>
+                      <br/>
+                      <br/>
+                      <h5><Label bsStyle="info">Account Being Used: {this.state.accounts[0]}</Label></h5>
+                  </Col>
+              </Row>
+              <Row>
+                  
                   
               </Row>
+
               <Row className="displayRow">
                 <Col md={12}>
+                  <hr/>
                   <Table >
                     <thead>
                       <tr>
@@ -209,7 +227,7 @@ class ShopperHome extends Component {
                     <tr>
                       <td>Product Name</td>
                       <td>Quantity</td>
-                      <td>Price</td>
+                      <td>Price (Wei)</td>
                       <td>Buy</td>
                     </tr>
                   </thead>

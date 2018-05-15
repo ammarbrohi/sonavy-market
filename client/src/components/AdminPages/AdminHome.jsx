@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import OnlineMarketplaceContract from "../../contracts/OnlineMarketplace.json";
 import getWeb3 from "../../utils/getWeb3";
-import { Row, Col, Grid, Button, FormGroup, ControlLabel, FormControl } from "react-bootstrap";
+import { Row, Col, Grid, Button, FormGroup, ControlLabel, FormControl, Label } from "react-bootstrap";
 import swal from 'sweetalert';
 
 
@@ -118,8 +118,12 @@ class AdminHome extends Component {
         <div className="message">Administrator Mode</div>;
         <Grid>
             <Row>
-                <Col md={10}>
+                <Col md={4}>
                     <h3>Manage Store Owners</h3>
+                </Col>
+                <Col md={6}>
+                    <br/>
+                    <h5><Label bsStyle="danger">Account Being Used: {this.state.accounts[0]}</Label></h5>
                 </Col>
                 <Col md={2}>
                     <br/>
